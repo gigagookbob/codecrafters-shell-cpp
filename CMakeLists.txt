@@ -8,4 +8,8 @@ set(CMAKE_CXX_STANDARD 23) # Enable the C++23 standard
 
 add_executable(shell ${SOURCE_FILES})
 
-target_link_libraries(shell PRIVATE readline)
+if (WIN32)
+  message(STATUS "Windows detected: building without readline")
+else()
+  target_link_libraries(shell PRIVATE readline)
+endif()
