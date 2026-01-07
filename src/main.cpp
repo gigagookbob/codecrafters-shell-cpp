@@ -9,8 +9,16 @@ int main()
 
   std::string command;
 
-  std::cout << "$ ";
-  std::cin >> command;
+  while (true)
+  {
+    std::cout << "$ ";
+    std::cin >> command;
 
-  std::cout << command << ": command not found";
+    if (command == "exit")
+    {
+      return 0;
+    }
+
+    std::cout << command << ": command not found" << std::endl;
+  }
 }
