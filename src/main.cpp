@@ -9,7 +9,7 @@ int main()
 
   std::string command;
 
-  while (true)
+  while (command != "exit")
   {
     std::cout << "$ ";
     std::cin >> command;
